@@ -23,5 +23,9 @@ export function isFunction(value: any): value is Function {
 }
 
 export function isObject(value: any): value is Object {
+  if (isNull(value) || isFunction(value)) {
+    return false
+  }
+
   return typeof value === 'object'
 }
