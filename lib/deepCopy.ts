@@ -14,7 +14,6 @@ function isNonDeepCopy(value: any) {
 
 export function deepCopy<T>(input: T): T {
   if (isNonDeepCopy(input)) {
-    console.log(1)
     return input as T
   }
 
